@@ -1,0 +1,51 @@
+/* Запрет выделения текста */
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  /* Добавление курсора-выделения при наведении */
+  body::selection {
+    background-color: transparent;
+  }
+  
+  
+  #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff; /* Цвет фона прелоадера */
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #loader {
+      border: 16px solid #f3f3f3; /* Цвет обводки прелоадера */
+      border-top: 16px solid #3498db; /* Цвет верхней части прелоадера */
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    #content {
+      display: none; /* Изначально скрываем содержимое страницы */
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
